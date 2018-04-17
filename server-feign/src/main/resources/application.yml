@@ -1,0 +1,10 @@
+server.port: 8761
+
+spring:
+  application:  
+    name: server-feign
+ 
+eureka.instance.hostname: localhost
+eureka.client.registerWithEureka: false
+eureka.client.fetchRegistry: false
+eureka.client.serviceUrl.defaultZone: http://localhost:8764/eureka/
