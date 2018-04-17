@@ -5,6 +5,8 @@ spring:
     name: server-feign
  
 eureka.instance.hostname: localhost
-eureka.client.registerWithEureka: false
+#设置为false，代表不向注册中心注册自己
+eureka.client.registerWithEureka: false 
+#设置为false，代表不去检索服务
 eureka.client.fetchRegistry: false
 eureka.client.serviceUrl.defaultZone: http://localhost:8764/eureka/
