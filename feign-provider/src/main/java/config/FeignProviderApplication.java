@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableDiscoveryClient//注解让该应用成为Euraka客户端
 @RestController
 public class FeignProviderApplication {
 
