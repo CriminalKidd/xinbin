@@ -20,4 +20,7 @@ public class FeignProviderApplication {
 	 public String getProvider() {
 		 return "Feign Provider Success";
 	 }
+	 
+	 
+	 
 }
