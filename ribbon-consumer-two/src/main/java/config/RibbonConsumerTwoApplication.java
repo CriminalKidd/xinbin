@@ -8,16 +8,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableDiscoveryClient//eureka å®¢æˆ·ç«¯æ³¨å†Œæ³¨è§£
+@EnableDiscoveryClient
 @RestController
-public class FeignProviderApplication {
+public class RibbonConsumerTwoApplication {
 
-	 public static void main(String[] args) {
-	        SpringApplication.run(FeignProviderApplication.class, args);
-	 }
-	 
-	 @RequestMapping(value="/testProvider" ,method = RequestMethod.GET)
-	 public String getProvider() {
-		 return "Feign Provider Success";
+	public static void main(String[] args) {
+		SpringApplication.run(RibbonConsumerTwoApplication.class, args);
+	}
+	
+	 /**
+	  * ¸ºÔØ¾ùº¬²âÊÔÀà
+	  * @return
+	  */
+	 @RequestMapping(value="/testRibbon" , method=RequestMethod.GET)
+	 public String testRibbon() {
+		 return "Consumer two success";
 	 }
 }

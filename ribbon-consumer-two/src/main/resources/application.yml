@@ -1,4 +1,4 @@
-server.port: 8766
+server.port: 8777
 
 spring:
   application:  
