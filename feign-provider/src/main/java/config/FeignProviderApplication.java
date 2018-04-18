@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableDiscoveryClient//ע���ø�Ӧ�ó�ΪEuraka�ͻ���
+@EnableDiscoveryClient//eureka 客户端注册注解
 @RestController
 public class FeignProviderApplication {
 
@@ -21,6 +21,13 @@ public class FeignProviderApplication {
 		 return "Feign Provider Success";
 	 }
 	 
-	 
+	 /**
+	  * 负载均含测试类
+	  * @return
+	  */
+	 @RequestMapping(value="/testRibbon" , method=RequestMethod.GET)
+	 public String testRibbon() {
+		 return "provider success 2";
+	 }
 	 
 }

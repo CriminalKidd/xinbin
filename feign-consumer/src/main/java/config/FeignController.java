@@ -17,4 +17,5 @@ public class FeignController {
 		String s = service.getStr();
 		System.out.println(s);
 	}
+	
 }
