@@ -2,6 +2,7 @@ package test;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +18,16 @@ import com.bin.mapper.TestMapper;
 @WebAppConfiguration
 public class TestApp {
 
+	Logger logger=Logger.getLogger(TestApp.class);
+	
 	@Autowired
 	TestMapper  tm;
 	
 	@Test
 	public void test() {
 		List<Map> list=tm.seelctUserInfo();
-		System.out.println(JSONObject.toJSONString(list));
+		
+		logger.info(JSONObject.toJSONString(list));
 	}
 	
 }
