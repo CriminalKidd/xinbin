@@ -1,0 +1,36 @@
+
+spring:
+ profiles:
+  active: dev
+ thymeleaf:
+  prefix: classpath:/templates/
+  # \u4F7F\u7528druid\u6570\u636E\u6E90
+  type: com.alibaba.druid.pool.DruidDataSource
+  driver-class-name: com.mysql.jdbc.Driver
+  filters: stat
+  maxActive: 20
+  initialSize: 1
+  maxWait: 60000
+  minIdle: 1
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: select 'x'
+  testWhileIdle: true
+  testOnBorrow: false
+  testOnReturn: false
+  poolPreparedStatements: true
+  maxOpenPreparedStatements: 20
+ #模板引擎
+ freemarker:
+  #关闭缓存
+  cache: false
+  request-context-attribute: request
+  #模板加载的位置
+  template-loader-path: classpath:/templates
+  #前缀
+  #suffix: .htm
+  #后缀
+  #prefix: /htm/
+mybatis:
+ mapper-locations: classpath:mapping/*.xml
+ type-aliases-package: com.bin.model

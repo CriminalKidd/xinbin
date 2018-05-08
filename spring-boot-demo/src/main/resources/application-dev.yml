@@ -1,0 +1,9 @@
+server:
+ port: 8088
+
+spring:
+ datasource:
+  name: test
+  url: jdbc:mysql://localhost:8080/dev
+  username: root
+  password: 123456
