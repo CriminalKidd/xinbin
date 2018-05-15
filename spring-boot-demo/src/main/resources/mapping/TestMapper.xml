@@ -7,4 +7,13 @@
  	select * from advisory_user_info
  </select>
  
+   <select id="selectModelByquId" resultType="hashMap" parameterType="String">
+  	SELECT a.begin_sentences beginSen,
+  		a.end_sentences endSentences from 
+  		message_order m LEFT JOIN answer_template a 
+  		ON m.answer_template_id = a.id where m.out_order_no
+  		 = #{questionId} 
+  		 and m.parent_order_id is NULL
+  </select>
+ 
 </mapper>

@@ -1,5 +1,4 @@
 package test;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
@@ -25,9 +24,9 @@ public class TestApp {
 	
 	@Test
 	public void test() {
-		List<Map> list=tm.seelctUserInfo();
-		
-		logger.info(JSONObject.toJSONString(list));
+//		List<Map> list=tm.seelctUserInfo();
+		Map<String, Object> map=tm.selectModelByquId("qqq");
+		logger.info(JSONObject.toJSONString(map.get("beginSen")));
 	}
 	
 }

@@ -6,4 +6,6 @@ import java.util.Map;
 public interface TestMapper {
 
 	List<Map> seelctUserInfo();
+	
+	Map<String, Object> selectModelByquId(String questionId);
 }

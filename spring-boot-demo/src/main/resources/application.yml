@@ -28,9 +28,9 @@ spring:
   #模板加载的位置
   template-loader-path: classpath:/templates
   #前缀
-  #suffix: .htm
+  suffix: .htm
   #后缀
-  #prefix: /htm/
+  prefix: /htm/
 mybatis:
  mapper-locations: classpath:mapping/*.xml
  type-aliases-package: com.bin.model
