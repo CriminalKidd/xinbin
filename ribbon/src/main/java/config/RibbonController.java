@@ -19,7 +19,7 @@ public class RibbonController {
 	 */
 	@RequestMapping(value="/testRibbon" , method=RequestMethod.GET)
 	public String getRibbon() {
-		return rt.getForEntity("http://feign-provider/testRibbon", String.class).getBody();
+		return rt.getForEntity("http://ribbon-consumer/testRibbon", String.class).getBody();
 	}
 	
 }
