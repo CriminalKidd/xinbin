@@ -1,0 +1,15 @@
+server:
+ port: 8761
+
+spring:
+ application:
+  name: server-feign
+    
+eureka:
+ instance:
+  hostname: localhost
+ client:
+  registerWithEureka: false #设置为false，代表不向注册中心注册自己
+  fetchRegistry: false #设置为false，代表不去检索服务
+  serviceUrl:
+   defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
