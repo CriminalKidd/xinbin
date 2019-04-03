@@ -1,0 +1,26 @@
+具体操作步骤:
+一、上传一个独立的分支（比如代码是从工程中直接DOWNLOAD ZIP文件如BowlingScore-test.zip，该文件与原MASTER分支是独立的）
+
+1、Git init （在本地工程目录下），生成.git 文件夹
+
+Git init
+2、上传修改的文件
+
+git add *
+(*可替换成具体要上传的文件名，*表示提交所有有变化的文件) 3、添加上传文件的描述
+git commit -m "test" 
+ （”test“为分支名）
+4、（创建分支）
+
+git branch test
+5、（切换分支）
+
+git checkout test
+6、与远程分支相关联
+
+git remote add origin https://github.com/yangxiaoyan20/BowlingScore.git
+   （”BowlingScore“ 为工程名）
+7、（将分支上传）
+
+git push origin test
+注意:提示 “请输入github用户名和密码“
